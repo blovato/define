@@ -1,0 +1,5 @@
+ngrok
+credentials.sh
+npm-debug.log
+img/
+node_modules/
