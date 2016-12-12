@@ -1,4 +1,5 @@
 # /define slack slash command
+
 > `/define [word]`
 > A slack slash integration for getting the dictionary definition of words
 
@@ -14,9 +15,9 @@ $ npm install
 
 1. Start the express server by running:
 
-```bash
-$ npm start
-```
+    ```bash
+    $ npm start
+    ```
 
 2. Start a server tunneling service like [ngrok](https://ngrok.com/) to expose a public url that Slack can request from.
 
