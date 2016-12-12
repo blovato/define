@@ -15,9 +15,7 @@ app.post('/define', (req, res) => {
   const { text, token, user_name } = req.body;
   if (!text) return res.sendStatus(400);
   if (token !== slackToken) return res.sendStatus(401);
-
   console.log(`${user_name} asked to define '${text}'`);
-  const merriamLink = `https://www.merriam-webster.com/dictionary/${text}`
 
   fetchUrl(`https://owlbot.info/api/v1/dictionary/${text}?format=json`, (error, meta, body) => {
     const parsedBody = JSON.parse(body.toString()) || [];
@@ -27,7 +25,7 @@ app.post('/define', (req, res) => {
       // the person who wrote this api spelled 'definition' wrong :(
       return {
         title: `${text} (${definition.type})`,
-        title_link: merriamLink,
+        title_link: `https://www.merriam-webster.com/dictionary/${text}`,
         text: ': ' + definition.defenition,
         footer: definition.example || '',
         color: "#c33f47",
