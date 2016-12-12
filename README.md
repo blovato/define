@@ -3,6 +3,8 @@
 > `/define [word]`
 > A slack slash integration for getting the dictionary definition of words
 
+![Example](https://github.com/blovato/define/raw/master/screenshots/define.png "define example result")
+
 ## Development
 
 Install Dependencies
