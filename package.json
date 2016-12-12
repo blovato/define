@@ -4,7 +4,7 @@
   "description": "slack slash command to define words",
   "main": "server.js",
   "scripts": {
-    "start": ". ./credentials.sh && babel-node index.js",
+    "start": ". ./credentials.sh && babel-node server.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [
